@@ -1,11 +1,9 @@
-with open('/Users/oyesanmi/PycharmProjects/advent-of-code-2021/py/day01/puzzle_input.txt', 'r') as file_in:
-    lines_list = [int(lines.rstrip()) for lines in file_in]
-
-inc = 0
+with open("puzzle_input.txt", "r") as file_in:
+    lines = [int(lines.rstrip()) for lines in file_in]
 
 
 def sliding_window_sums(lst, window_size=3, stride=1):
-    """ Return a list of sums of sliding window"""
+    """Return a list of sums of sliding window"""
     w = []
     while lst:
         if len(lst[:window_size]) == window_size:
@@ -14,7 +12,8 @@ def sliding_window_sums(lst, window_size=3, stride=1):
     return w
 
 
-window = sliding_window_sums(lines_list)
+window = sliding_window_sums(lines)
+inc = 0
 
 for i, e in enumerate(window):
     if i == 0:

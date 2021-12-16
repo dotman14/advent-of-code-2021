@@ -1,13 +1,13 @@
-with open('puzzle_input.txt', 'r') as file_in:
-    l = [int(lines.rstrip()) for lines in file_in]
+with open("puzzle_input.txt", "r") as file_in:
+    lines = [int(lines.rstrip()) for lines in file_in]
     inc = 0
 
-for i, e in enumerate(l):
+for i, e in enumerate(lines):
     if i == 0:
-        if l[i + 1] > l[i]:
+        if lines[i + 1] > lines[i]:
             inc += 1
-    elif 0 < i < len(l) - 1:
-        if l[i + 1] > l[i]:
+    elif 0 < i < len(lines) - 1:
+        if lines[i + 1] > lines[i]:
             inc += 1
 
 print(inc)
