@@ -10,7 +10,7 @@ with open("input.txt", "r") as file_input:
                 idx_dict[idx] = [val2]
 
 
-def binary_and_flip(bin_dict):
+def binary_and_flip(bin_dict: dict) -> int:
     bin_str = ""
     for i in bin_dict:
         bin_str += Counter(bin_dict[i]).most_common(1)[0][0]

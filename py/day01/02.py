@@ -2,7 +2,7 @@ with open("puzzle_input.txt", "r") as file_in:
     lines = [int(lines.rstrip()) for lines in file_in]
 
 
-def sliding_window_sums(lst, window_size=3, stride=1):
+def sliding_window_sums(lst: list, window_size=3, stride=1) -> list:
     """Return a list of sums of sliding window"""
     w = []
     while lst:
