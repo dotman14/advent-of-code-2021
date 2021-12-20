@@ -4,8 +4,8 @@ total_dict = {}
 
 for i, j in enumerate(list_of_ints):
     total = 0
-    for x, y in enumerate(list_of_ints):
-        total += abs(list_of_ints[x] - list_of_ints[i])
+    for y in list_of_ints:
+        total += abs(y - j)
     total_dict[i] = total
 idx = sorted(total_dict, key=total_dict.get)[0]
 
